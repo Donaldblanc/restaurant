@@ -17,18 +17,27 @@ app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
+ app.get("/reserve", function(req, res) {	
+       res.sendFile(path.join(__dirname, "reserve.html"));	
+  });  
+
+  app.get("/table", function(req, res) {
+    res.sendFile(path.join(__dirname, "tables.html"));	
+  });
+
 app.post("/tables", function (request, res){
 
-    var newTable = req.body;
+    var newTable = request.body;
 
     console.log(newTable);
     tables.push(newTable);
     res.json(newTable);
-
 });
 
 app.listen(PORT, function () {
   console.log("App listening on PORT " + PORT);
 });
+
+
 
 

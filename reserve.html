@@ -100,7 +100,7 @@
                 customerID: $("#customerID").val().trim()
             };
 
-            $.post("/api/tables", newTable)
+            $.post("/tables", newTable)
                 .then(function (data) {
                     //   console.log("add.html", data);
                     alert("Reservation has been made!");
