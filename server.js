@@ -5,12 +5,13 @@ var path = require("path");
 // Sets up the Express App
 // =============================================================
 var app = express();
-var PORT =  process.env.PORT || 3000;
+var PORT = process.env.PORT || 3000;
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+<<<<<<< HEAD
 app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "index.html"));
   });
@@ -19,8 +20,16 @@ app.get("/", function(req, res) {
   });  
   app.get("/api/tables", function(req, res) {
     res.sendFile(path.join(__dirname, "tables.html"));
+=======
+var tables = [];
 
-  app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
-  });
-  
+app.get("/", function (req, res) {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
+app.listen(PORT, function () {
+  console.log("App listening on PORT " + PORT);
+});
+
+>>>>>>> 4860ab1be5a9c8512d496273134e76999ee787d5
+
