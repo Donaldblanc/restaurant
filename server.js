@@ -11,6 +11,7 @@ var PORT = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+<<<<<<< HEAD
 app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "index.html"));
   });
@@ -21,9 +22,27 @@ app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "tables.html"));
 var tables = [];
 
+=======
+var tables = [];
+
+app.get("/", function (req, res) {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
+app.get("/reserve", function (req, res) {
+    res.sendFile(path.join(__dirname, "reserve.html"));
+  });
+
+  app.get("/table", function (req, res) {
+    res.sendFile(path.join(__dirname, "tables.html"));
+  });
+
+
+
+>>>>>>> cc9bab9897861fbcbc02a5df697057990ee922da
 app.post("/tables", function (request, res){
 
-    //josh and whiilie  stick code here 
+    //josh and wiilie  stick code here 
 
 });
 
