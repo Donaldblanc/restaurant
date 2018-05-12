@@ -27,6 +27,12 @@ app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
+app.post("/tables", function (request, res){
+
+    //josh and whiilie  stick code here 
+
+});
+
 app.listen(PORT, function () {
   console.log("App listening on PORT " + PORT);
 });
