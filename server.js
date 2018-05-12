@@ -11,16 +11,6 @@ var PORT = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-<<<<<<< HEAD
-app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "index.html"));
-  });
-  app.get("/reserve", function(req, res) {
-    res.sendFile(path.join(__dirname, "reserve.html"));
-  });  
-  app.get("/api/tables", function(req, res) {
-    res.sendFile(path.join(__dirname, "tables.html"));
-=======
 var tables = [];
 
 app.get("/", function (req, res) {
@@ -32,14 +22,14 @@ app.get("/reserve", function (req, res) {
   });
 
   app.get("/table", function (req, res) {
-    res.sendFile(path.join(__dirname, "table.html"));
+    res.sendFile(path.join(__dirname, "tables.html"));
   });
 
 
 
 app.post("/tables", function (request, res){
 
-    //josh and whiilie  stick code here 
+    //josh and wiilie  stick code here 
 
 });
 
@@ -47,5 +37,4 @@ app.listen(PORT, function () {
   console.log("App listening on PORT " + PORT);
 });
 
->>>>>>> 4860ab1be5a9c8512d496273134e76999ee787d5
 
