@@ -90,10 +90,11 @@
 
     <script type="text/javascript">
         // Question: What does this code do?
-        $("#reserve-btn").on("click", function (event) {
+        $("#add-btn").on("click", function (event) {
+            console.log("clicked the button")
             event.preventDefault();
             var newTable = {
-                customerName: $("#name").val().trim(),
+                customerName: $("#age").val().trim(),
                 phoneNumber: $("#number").val().trim(),
                 customerEmail: $("#email").val().trim(),
                 customerID: $("#customerID").val().trim()
