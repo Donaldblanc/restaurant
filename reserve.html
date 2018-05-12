@@ -89,12 +89,18 @@
     </div>
 
     <script type="text/javascript">
+<<<<<<< HEAD
 
         $("#reserve-btn").on("click", function (event) {
             console.log("hey");
+=======
+        // Question: What does this code do?
+        $("#add-btn").on("click", function (event) {
+            console.log("clicked the button")
+>>>>>>> e358231f776cfaa7f9c6b82b453e7b81bb252cd6
             event.preventDefault();
             var newTable = {
-                customerName: $("#name").val().trim(),
+                customerName: $("#age").val().trim(),
                 phoneNumber: $("#number").val().trim(),
                 customerEmail: $("#email").val().trim(),
                 customerID: $("#customerID").val().trim()
