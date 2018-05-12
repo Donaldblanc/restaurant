@@ -55,17 +55,17 @@
 
                         <div class="form-group">
                             <label for="number">Phone Number</label>
-                            <input type="text" class="form-control" id="role">
+                            <input type="text" class="form-control" id="number">
                         </div>
 
                         <div class="form-group">
                             <label for="customerEmail">Email</label>
-                            <input type="text" class="form-control" id="age">
+                            <input type="text" class="form-control" id="email">
                         </div>
 
                         <div class="form-group">
                             <label for="customerID">Unique ID</label>
-                            <input type="text" class="form-control" id="force-points">
+                            <input type="text" class="form-control" id="customerID">
                         </div>
 
                     </form>
@@ -89,8 +89,9 @@
     </div>
 
     <script type="text/javascript">
-        // Question: What does this code do?
+
         $("#reserve-btn").on("click", function (event) {
+            console.log("hey");
             event.preventDefault();
             var newTable = {
                 customerName: $("#name").val().trim(),
@@ -99,7 +100,6 @@
                 customerID: $("#customerID").val().trim()
             };
 
-            // Question: What does this code do??
             $.post("/api/tables", newTable)
                 .then(function (data) {
                     //   console.log("add.html", data);
