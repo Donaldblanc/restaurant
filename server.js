@@ -11,21 +11,19 @@ var PORT = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "index.html"));
-  });
-  app.get("/reserve", function(req, res) {
-    res.sendFile(path.join(__dirname, "reserve.html"));
-  });  
-  app.get("/tables", function(req, res) {
-    res.sendFile(path.join(__dirname, "tables.html"));
 var tables = [];
 
+app.get("/", function (req, res) {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
 app.post("/tables", function (request, res){
-var newTable= req.body;
-tables.push(newTable);
-res.json(newTable);
-    //josh and wiilie  stick code here 
+
+    var newTable = req.body;
+
+    console.log(newTable);
+    tables.push(newTable);
+    res.json(newTable);
 
 });
 
